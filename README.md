@@ -20,9 +20,8 @@ There are two external libraries used, sys (system) and unittest.
 ├── ccwc.py                  - the file contains methods used to measure input content.
 ├── main.py                  - the tool main entry.
 ├── process.py               - methods used to process command arguments.
-├── test_ccwc.py             - tests applied in ccwc tool assessment.
-└── test.txt                 - the file used in ccwc tool assessment.
-
+├── test.txt                 - the file used in ccwc tool assessment.
+└── test_ccwc.py             - tests applied in ccwc tool assessment.
 ```
 
 ### Use of the Tool
@@ -54,5 +53,5 @@ cat filename | python3 main.py ccwc [option]
 The test file can be run from the command line:
 
 ```
-python3 -m unittest test.py
+python3 -m unittest test_ccwc.py
 ```
