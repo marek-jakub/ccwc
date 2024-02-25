@@ -27,7 +27,7 @@ def _measure_content(content):
         line_count += line.count(10)
         word_count += len(line.split())
         char_count += len(line.decode())
-    return line_count, word_count, file_size,char_count
+    return line_count, word_count, file_size, char_count
 
 
 def _print_all(*args):
