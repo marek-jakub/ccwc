@@ -1,5 +1,3 @@
-import os
-
 
 def _read_file(file):
     """
@@ -29,7 +27,7 @@ def _measure_content(content):
         line_count += line.count(10)
         word_count += len(line.split())
         char_count += len(line.decode())
-    return file_size, line_count, word_count, char_count
+    return line_count, word_count, file_size,char_count
 
 
 def _print_all(*args):
@@ -38,37 +36,37 @@ def _print_all(*args):
     :param args: A list of elements to be printed.
     :return: None
     """
-    print(' '.join(str(x) for x in args[0]), args[1])
+    print(' ',  '  '.join(str(x) for x in args[0][0:3]), args[1])
 
 
 def _print_bytes(*args):
-    """
-    The function prints the first element of the first list element in args,
-    followed by the second element.
-    :param args: A list of elements to be printed.
-    :return: None
-    """
-    print(args[0][0], args[1])
-
-
-def _print_lines(*args):
-    """
-    The function prints the second element of the first list element in args,
-    followed by the second element.
-    :param args: A list of elements to be printed.
-    :return: None
-    """
-    print(args[0][1], args[1])
-
-
-def _print_words(*args):
     """
     The function prints the third element of the first list element in args,
     followed by the second element.
     :param args: A list of elements to be printed.
     :return: None
     """
-    print(args[0][2], args[1])
+    print(' ', args[0][2], args[1])
+
+
+def _print_lines(*args):
+    """
+    The function prints the first element of the first list element in args,
+    followed by the second element.
+    :param args: A list of elements to be printed.
+    :return: None
+    """
+    print(' ', args[0][0], args[1])
+
+
+def _print_words(*args):
+    """
+    The function prints the second element of the first list element in args,
+    followed by the second element.
+    :param args: A list of elements to be printed.
+    :return: None
+    """
+    print(' ', args[0][1], args[1])
 
 
 def _print_chars(*args):
@@ -78,7 +76,7 @@ def _print_chars(*args):
     :param args: A list of elements to be printed.
     :return: None
     """
-    print(args[0][3], args[1])
+    print(' ', args[0][3], args[1])
 
 
 # The dictionary maps command-line arguments to corresponding functions.
